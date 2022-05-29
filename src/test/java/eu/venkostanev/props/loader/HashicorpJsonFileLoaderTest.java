@@ -24,7 +24,7 @@ class HashicorpJsonFileLoaderTest {
 	@Test
 	void testGetProperties() throws PropsLoaderException {
 		HashicorpJsonFileLoader loader = new HashicorpJsonFileLoader();
-		Properties props = loader.getProperties(this.getClass().getResource("/first.json").getPath());
+		Properties props = loader.getProperties(this.getClass().getResource("/bad.json").getPath());
 		assertTrue(props.containsKey("prop1"));
 		assertFalse(props.containsKey("prop3"));
 		assertTrue(props.containsValue("value1"));
